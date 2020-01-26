@@ -1,6 +1,8 @@
 import socketio from "socket.io-client";
 
-const socket = socketio("http://192.168.0.106:3333", {
+const { BASE_URL } = process.env;
+
+const socket = socketio(BASE_URL, {
   autoConnect: false
 });
 
